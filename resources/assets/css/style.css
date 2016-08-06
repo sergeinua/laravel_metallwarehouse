@@ -1689,3 +1689,11 @@ form.order .fm1 { color:#c50909; font-weight:bold; }
 @media (max-width: 540px) {
     .top .cont p { padding-top:0; }
 }
+
+.msg-f {
+    background-color: whitesmoke;
+}
+
+.msg-s {
+    background-color: powderblue;
+}

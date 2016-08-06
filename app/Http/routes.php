@@ -38,6 +38,8 @@ Route::post('admin/settings/create', 'SettingsController@create');
 
 Route::get('admin/menu', 'MenuController@index');
 
+Route::get('admin/message', 'MessageController@index');
+
 Route::get('/register', function (){
     return \Redirect::route('home');
 });

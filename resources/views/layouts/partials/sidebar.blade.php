@@ -34,6 +34,9 @@
             <li class="header">{{ trans('adminlte_lang::message.header') }}</li>
             <!-- Optionally, you can add icons to the links -->
             <li class="active">
+                <a href="{{ url('/admin/message') }}"><i class='fa fa-link'></i> <span>Сообщения</span></a>
+            </li>
+            <li>
                 <a href="{{ url('/admin') }}"><i class='fa fa-link'></i> <span>Настройки</span></a>
             </li>
             <li>
