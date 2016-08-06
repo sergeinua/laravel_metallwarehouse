@@ -1,7 +1,8 @@
-{{ Form::open(['url' => '/message', 'method' => 'POST', 'id' => 'zapis', 'class' => 'order clearfix']) }}
+{{ Form::open(['url' => 'message', 'method' => 'POST', 'id' => 'order', 'class' => 'order clearfix']) }}
+    <input type="hidden" name="_token" value="{{ csrf_token() }}">
     <p class="title">Сделайте заказ</p>
     <label>
-        {{ Form::text('name', null, ['placeholder'=>'Ваше имя']) }}
+        {{ Form::text('name', null, ['placeholder'=>'Ваше имя', 'id' => 'name']) }}
     </label>
     <label>
         {{ Form::text('email', null, ['placeholder'=>'email']) }}
@@ -19,7 +20,7 @@
 
 <script>
     $(document).ready(function () {
-        $('#customer_tel').attr('maxlength', '14');
+        $('#tel').attr('maxlength', '14');
         $(function () {
             $("#tel").mask("(999) 999-9999");
             $("#tel").on("blur", function () {
@@ -31,11 +32,6 @@
                     $(this).val(first + move + '-' + lastfour);
                 }
             });
-        });
-        var form = $('#zapis');
-        form.on('submit', function (){
-            alert('d');
-            return false;
         });
     });
 </script>

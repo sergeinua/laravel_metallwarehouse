@@ -501,9 +501,19 @@
             </div>
             <div class="r_col">
 
-                @yield('content')
+                @if(Session::has('flash_message'))
 
-                @include('layouts.form')
+                    <div class="alert alert-success">
+                        {{ Session::get('flash_message') }}
+                    </div>
+
+                @else
+
+                    @yield('content')
+
+                    @include('layouts.form')
+
+                @endif
 
             </div>
         </div>
