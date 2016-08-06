@@ -1,9 +1,4 @@
-
-@if(Auth::check())
-    @extends('layouts.app')
-@else
-    @extends('layouts.main')
-@endif
+@extends('layouts.main')
 
 @section('htmlheader_title')
     {{ trans('adminlte_lang::message.pagenotfound') }}
@@ -48,7 +43,7 @@
         <p>
             Запрашиваемая страница не найдена
         </p>
-        <a href="/">на главную</a>
+        <p><a href="/">на главную</a></p>
     </div><!-- /.error-content -->
 </div><!-- /.error-page -->
 
