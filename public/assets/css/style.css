@@ -464,7 +464,7 @@ a:hover{
 }
 .content .l_col .catalog ul ul li a:before{
     display: inline-block;
-    content: "—";
+    content: "-";
     margin-right: 10px;
 }
 .content .l_col .catalog li.parent > a > span{
