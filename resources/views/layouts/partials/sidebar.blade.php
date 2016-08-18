@@ -40,7 +40,7 @@
                 <a href="{{ url('/admin') }}"><i class='fa fa-link'></i> <span>Настройки</span></a>
             </li>
             <li>
-                <a href="{{ url('/admin/menu') }}"><i class='fa fa-link'></i> <span>Структура меню</span></a>
+                <a href="{{ url('/admin/category') }}"><i class='fa fa-link'></i> <span>Структура меню</span></a>
             </li>
             <li class="treeview">
                 <a href="#"><i class='fa fa-link'></i> <span>{{ trans('adminlte_lang::message.multilevel') }}</span> <i class="fa fa-angle-left pull-right"></i></a>

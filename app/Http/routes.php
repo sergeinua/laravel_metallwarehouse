@@ -36,7 +36,11 @@ Route::get('admin/settings/create', 'SettingsController@create');
 
 Route::post('admin/settings/create', 'SettingsController@create');
 
-Route::get('admin/menu', 'MenuController@index');
+Route::get('admin/category', 'CategoryController@index');
+
+Route::get('admin/category/create', 'CategoryController@create');
+
+Route::post('admin/category/create', 'CategoryController@create');
 
 Route::get('admin/message', 'MessageController@index');
 
