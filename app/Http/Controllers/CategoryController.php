@@ -26,13 +26,11 @@ class CategoryController extends Controller
 
     public function create(Request $request)
     {
-
         if($request->isMethod('post')) :
 
             $validator = Validator::make($request->all(), [
                 'name' => 'required',
                 'slug' => 'required',
-                'parent_id' => 'required|numeric',
                 'status' => 'required|numeric'
             ]);
             if($validator->fails()) :
@@ -43,15 +41,18 @@ class CategoryController extends Controller
                 $model = new Category();
                 $model->name = $request->input('name');
                 $model->slug = $request->input('slug');
-                $model->parent_id = $request->input('parent_id');
+                $model->parent_id = ($request->input('parent_id') == '') ? '0' : $request->input('parent_id');
                 $model->status = $request->input('status');
-//                $model->save();
+                $model->save();
                 Session::flash('success', 'Категория сохранена');
+
                 return Redirect::to('admin/category');
             endif;
 
         endif;
 
-        return view('category.create');
+        $category_list = Category::getCategoryList();
+
+        return view('category.create')->with(['category_list' => $category_list]);
     }
 }

@@ -25,7 +25,7 @@
                             </div>
 
                             <div class="form-group input-group-lg">
-                                {{ Form::select('parent_id', ['1'=>'1','2'=>'2'], null, ['placeholder' => 'Родительская категория', 'class' => 'form-control']) }}
+                                {{ Form::select('parent_id', $category_list, null, ['placeholder' => 'Родительская категория', 'class' => 'form-control']) }}
                             </div>
 
                             <div class="form-group input-group-lg">

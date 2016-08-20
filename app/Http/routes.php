@@ -44,6 +44,16 @@ Route::post('admin/category/create', 'CategoryController@create');
 
 Route::get('admin/message', 'MessageController@index');
 
+Route::get('admin/page', 'PageController@index');
+
+Route::get('admin/page/create', 'PageController@create');
+
+Route::post('admin/page/create', 'PageController@create');
+
+Route::get('admin/page/edit/{id}', 'PageController@edit');
+
+Route::post('admin/page/delete/{id}', 'PageController@delete');
+
 Route::get('/register', function (){
     return \Redirect::route('home');
 });
